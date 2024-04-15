@@ -1,8 +1,4 @@
-$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$profilePath = $PROFILE.CurrentUserAllHosts
+Add-Content -Path $profilePath -Value "`r`n. '$env:USERPROFILE\refreshenv.ps1'" -Force
 
-# Copy the RefreshEnv script to the user's home directory
-Copy-Item "$toolsPath\refreshenv.ps1" "$env:USERPROFILE\refreshenv.ps1" -Force
-
-# Add the RefreshEnv script to the user's profile
-Add-Content -Path $PROFILE -Value "`r`n. '$env:USERPROFILE\refreshenv.ps1'"
 
