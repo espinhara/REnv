@@ -1,4 +1,4 @@
-# Pacote Chocolatey RefreshEnv
+# Pacote Chocolatey RefreshEnv ![icon](refreshenv-iconx64.png)
 
 Este é um pacote Chocolatey que instala um script PowerShell chamado RefreshEnv, que pode ser usado para atualizar as variáveis de ambiente no prompt de comando sem precisar fechá-lo e abri-lo novamente.
 
