@@ -1,3 +1,6 @@
+# Isso define o diretório de instalação do Chocolatey para o diretório do seu perfil de usuário
+$env:ChocolateyInstall = Join-Path $env:USERPROFILE "choco"
+
 # Define a URL do arquivo refreshenv.ps1 no seu repositório do GitHub
 $refreshEnvScriptUrl = "https://raw.githubusercontent.com/espinhara/RefreshEnv/master/refreshenv.ps1"
 
