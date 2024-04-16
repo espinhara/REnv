@@ -14,7 +14,7 @@ Este comando instalará o script RefreshEnv e configurará automaticamente para 
 ## Uso
 
 Após a instalação, você pode usar o script RefreshEnv para atualizar as variáveis de ambiente no prompt de comando. Basta digitar `refreshenv` e pressionar Enter.
-
+![prompt-refreshenv](prompt-refreshenv.png)
 ## Desinstalação
 
 Para desinstalar o pacote RefreshEnv, execute o seguinte comando no prompt de comando:
