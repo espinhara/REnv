@@ -26,10 +26,10 @@
     <projectSourceUrl>https://github.com/espinhara/RefreshEnv.git</projectSourceUrl>
   </metadata>
   <files>
-    <file src="tools\chocolateyinstall.ps1" target="tools" />
-    <file src="tools\LICENCE.md" target="tools" />
-    <file src="tools\Readme.md" target="tools" />
-    <file src="tools\refreshenv.ps1" target="tools" />
-    <file src="tools\refreshenv-iconx64.png" target="tools" />
+    <file src="chocolateyinstall.ps1" target="tools" />
+    <file src="LICENSE.md" target="tools" />
+    <file src="Readme.md" target="tools" />
+    <file src="refreshenv.ps1" target="tools" />
+    <file src="refreshenv-iconx64.png" target="tools" />
   </files>
 </package>
