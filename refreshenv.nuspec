@@ -9,27 +9,28 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Installs RefreshEnv script to refresh environment variables.</description>
     <tags>refreshenv environment variables powershell</tags>
-    <dependencies>
+    <!-- <dependencies>
       <dependency id="chocolatey" version="0.0.0" />
-    </dependencies>
+    </dependencies> -->
     <projectUrl>https://github.com/espinhara/RefreshEnv.git</projectUrl>
     <iconUrl>
-      https://github.com/espinhara/RefreshEnv/blob/6e0ebef0305c2a7f6362c453fddaf378fb857567/refreshenv-iconx64.png</iconUrl>
+      https://raw.githubusercontent.com/espinhara/RefreshEnv/6e0ebef0305c2a7f6362c453fddaf378fb857567/refreshenv-icon.png</iconUrl>
     <licenseUrl>
-      https://github.com/espinhara/RefreshEnv/blob/44d728596d6e03ac609bfcdf021e89fe2ce245b3/LICENSE.md</licenseUrl>
+      https://raw.githubusercontent.com/espinhara/RefreshEnv/44d728596d6e03ac609bfcdf021e89fe2ce245b3/LICENSE.md</licenseUrl>
     <releaseNotes>Create package refreshenv version:1.0.0</releaseNotes>
     <summary>This is a Chocolatey package that installs a PowerShell script called RefreshEnv,
       which
       can be used to update environment variables in the command prompt without having to
       close and
       open it again.</summary>
-    <projectSourceUrl>https://github.com/espinhara/RefreshEnv.git</projectSourceUrl>
+    <projectSourceUrl>https://github.com/espinhara/RefreshEnv</projectSourceUrl>
   </metadata>
-  <files>
+  <!-- <files>
+    <file src="refreshenv.nuspec" target="tools/" />
     <file src="chocolateyinstall.ps1" target="tools/" />
     <file src="LICENSE.md" target="tools/" />
     <file src="Readme.md" target="tools/" />
     <file src="refreshenv.ps1" target="tools/" />
     <file src="refreshenv-iconx64.png" target="tools/" />
-  </files>
+  </files> -->
 </package>
