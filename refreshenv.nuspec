@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>refreshenv</id>
     <version>1.0.0</version>
@@ -9,12 +9,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Installs RefreshEnv script to refresh environment variables.</description>
     <tags>refreshenv environment variables powershell</tags>
-    <!-- <dependencies>
-      <dependency id="chocolatey" version="0.0.0" />
-    </dependencies> -->
     <projectUrl>https://github.com/espinhara/RefreshEnv.git</projectUrl>
     <iconUrl>
-      https://raw.githubusercontent.com/espinhara/RefreshEnv/6e0ebef0305c2a7f6362c453fddaf378fb857567/refreshenv-icon.png</iconUrl>
+      https://raw.githubusercontent.com/espinhara/RefreshEnv/3e1f1a2cc23eaba85f3808bc1271f8ca6d2eede8/refreshenv-icon.ico</iconUrl>
     <licenseUrl>
       https://raw.githubusercontent.com/espinhara/RefreshEnv/44d728596d6e03ac609bfcdf021e89fe2ce245b3/LICENSE.md</licenseUrl>
     <releaseNotes>Create package refreshenv version:1.0.0</releaseNotes>
@@ -25,12 +22,7 @@
       open it again.</summary>
     <projectSourceUrl>https://github.com/espinhara/RefreshEnv</projectSourceUrl>
   </metadata>
-  <!-- <files>
-    <file src="refreshenv.nuspec" target="tools/" />
-    <file src="chocolateyinstall.ps1" target="tools/" />
-    <file src="LICENSE.md" target="tools/" />
-    <file src="Readme.md" target="tools/" />
-    <file src="refreshenv.ps1" target="tools/" />
-    <file src="refreshenv-iconx64.png" target="tools/" />
-  </files> -->
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
