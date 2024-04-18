@@ -34,7 +34,7 @@ Agradecemos a esses incríveis colaboradores que ajudaram a tornar este projeto 
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/espinhara">
         <img src="https://avatars.githubusercontent.com/u/52253458?s=400&u=f772add846be9433827cfd3c91915ba3c2670f85&v=4" width="100px;" alt="Foto do Gabriel Espinhara no GitHub"/><br>
         <sub>
           <b>Gabriel Espinhara</b>
@@ -42,8 +42,8 @@ Agradecemos a esses incríveis colaboradores que ajudaram a tornar este projeto 
       </a>
     </td>
     <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/61356656?v=4" width="100px;" alt="Foto do Steve Jobs"/><br>
+      <a href="https://github.com/matheuslanduci">
+        <img src="https://avatars.githubusercontent.com/u/61356656?v=4" width="100px;" alt="Foto do Mathues Landuci"/><br>
         <sub>
           <b>Mathues Landuci</b>
         </sub>
