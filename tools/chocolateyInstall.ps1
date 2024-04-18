@@ -40,6 +40,4 @@ else {
 "@ -ForegroundColor Blue
     # Informa o usuário sobre o sucesso
     Write-Host "Executable '$executableName' moved to directory '$systemPath' and added with success to the PATH."
-
-    $null = [System.Console]::ReadKey()
 }
