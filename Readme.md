@@ -1,27 +1,27 @@
-# Pacote Chocolatey RefreshEnv ![icon](refreshenv-iconx64.png)
+# Pacote Chocolatey REnv <img src="https://res.cloudinary.com/espinhara/image/upload/v1713500969/REnv/wlgqhyjllk2kr7ghqv4m.ico" width="32px;" alt="Logo REnv"/>
 
-Este é um pacote Chocolatey que instala um script PowerShell chamado RefreshEnv, que pode ser usado para atualizar as variáveis de ambiente no prompt de comando sem precisar fechá-lo e abri-lo novamente.
+Este é um pacote Chocolatey que instala um script PowerShell chamado REnv, que pode ser usado para atualizar as variáveis de ambiente no prompt de comando sem precisar fechá-lo e abri-lo novamente.
 
 ## Instalação
 
-Para instalar o pacote RefreshEnv, certifique-se de ter o Chocolatey instalado no seu sistema. Em seguida, execute o seguinte comando no prompt de comando:
+Para instalar o pacote REnv, certifique-se de ter o Chocolatey instalado no seu sistema. Em seguida, execute o seguinte comando no prompt de comando:
 
->choco install refreshenv --version=1.0.0
+>choco install renv --version=0.0.1
 
 ![Prompt image](prompt.jpg)
-Este comando instalará o script RefreshEnv e configurará automaticamente para ser carregado sempre que um novo shell for iniciado.
+Este comando instalará o script REnv e configurará automaticamente para ser carregado sempre que um novo shell for iniciado.
 
 ## Uso
 
-Após a instalação, você pode usar o script RefreshEnv para atualizar as variáveis de ambiente no prompt de comando. Basta digitar `refreshenv` e pressionar Enter.
-![prompt-refreshenv](prompt-refreshenv.png)
+Após a instalação, você pode usar o script REnv para atualizar as variáveis de ambiente no prompt de comando. Basta digitar `renv` e pressionar Enter.
+![prompt-renv](prompt-renv.png)
 ## Desinstalação
 
-Para desinstalar o pacote RefreshEnv, execute o seguinte comando no prompt de comando:
+Para desinstalar o pacote REnv, execute o seguinte comando no prompt de comando:
 
-> choco uninstall refreshenv
+> choco uninstall renv
 
-Isso removerá o script RefreshEnv do seu sistema.
+Isso removerá o script REnv do seu sistema.
 
 ## Contribuições
 

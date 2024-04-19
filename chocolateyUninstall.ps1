@@ -6,7 +6,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Define o nome do executável
-$executableName = "refreshenv.exe"
+$executableName = "renv.exe"
 
 # Caminho para o diretório onde o executável está localizado
 $executablePath = [Environment]::GetFolderPath("System")

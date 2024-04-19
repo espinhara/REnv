@@ -1,11 +1,11 @@
-==================== RefreshEnv ====================
+==================== REnv ====================
 
-This RefreshEnv Chocolatey package was uploaded by the author, Gabriel Espinhara
+This REnv Chocolatey package was uploaded by the author, Gabriel Espinhara
 da Silva ESPINHARA.
 
 The original file can be downloaded and verified via it's product page at:
-https://github.com/espinhara/RefreshEnv
+https://github.com/espinhara/REnv
 
-v1.0.0 sha256: C1A9AF615B650E981D25F40B15500F8FAC07D965E24E739D72B4FA002EF0E7D1
+v0.0.1 sha256: B69D6837C064022AEE13C7E0F52B59441E3826F26A92CDACA162B8FCDF608230
 
-==================== RefreshEnv ====================
+==================== REnv ====================
