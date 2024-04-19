@@ -6,6 +6,6 @@ da Silva ESPINHARA.
 The original file can be downloaded and verified via it's product page at:
 https://github.com/espinhara/REnv
 
-v0.0.1 sha256: 398C30CDA963A55D352D6C51957E3A5C2B26CCC597B7DBE6CB32EC8C9FE6143A
+v0.0.1 sha256: 67F459446F86177E98B888D83135724A39F7C73B21EDD23CFFD75FC8131F274A
 
 ==================== REnv ====================

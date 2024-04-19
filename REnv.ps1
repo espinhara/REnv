@@ -19,24 +19,24 @@ function R-Env {
 Write-Host $promptREnv -ForegroundColor Blue
 
 # Defina o caminho da nova pasta que você deseja adicionar ao PATH
-$novaPasta = "C:\Users\Public"
-
-# Obtenha o valor atual da variável PATH do ambiente do sistema
-$valorPath = [System.Environment]::GetEnvironmentVariable("PATH", "Machine")
-
-# Verifique se a nova pasta já está no PATH
-if ($valorPath -notlike "*$novaPasta*") {
-    # Adicione a nova pasta ao PATH
-    $novoValorPath = "$valorPath;$novaPasta"
+$archive = "C:\Users\Public\REnv.exe"
+$diretorioDestino = "$env:SystemRoot\System32"
+#Verifica se o arquivo de origem existe
+if (Test-Path $archive) {
+    # Copia o arquivo para o diretório de destino
+    Copy-Item -Path $archive -Destination $diretorioDestino -Force
     
-    # Defina a variável PATH com o novo valor
-    [System.Environment]::SetEnvironmentVariable("PATH", $novoValorPath, "Machine")
-
-    Write-Host "A pasta $novaPasta foi adicionada ao PATH."
+    # Verifica se o arquivo foi copiado com sucesso
+    if (Test-Path (Join-Path $diretorioDestino (Split-Path $archive -Leaf))) {
+        Write-Host "Arquivo copiado com sucesso para $diretorioDestino."
+    }
+    else {
+        Write-Host "Falha ao copiar o arquivo para $diretorioDestino."
+    }
 }
-# else {
-#     Write-Host "A pasta $novaPasta já está no PATH."
-# }
+else {
+    Write-Host "O arquivo de origem $archive não foi encontrado."
+}
 
 if ($args -contains "--version" -or $args -contains "-v") {
     Write-Host "REnv version: 0.0.1"

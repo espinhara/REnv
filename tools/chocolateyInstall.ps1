@@ -9,7 +9,7 @@ $packageArgs = @{
     validExitCodes = @(0)
     checksumType   = 'sha256'
     url            = 'https://github.com/espinhara/REnv/raw/master/REnv.exe'
-    checksum       = 'B69D6837C064022AEE13C7E0F52B59441E3826F26A92CDACA162B8FCDF608230'
+    checksum       = '67F459446F86177E98B888D83135724A39F7C73B21EDD23CFFD75FC8131F274A'
 }
 
 # Instala o pacote Chocolatey
