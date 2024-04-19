@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>REnv</id>
+    <version>0.0.1</version>
+    <title>REnv</title>
+    <authors>Gabriel Espinhara Da Silva, Matheus Landuci</authors>
+    <owners>Gabriel Espinhara Da Silva</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Installs REnv script to refresh environment variables.</description>
+    <tags>renv environment variables powershell</tags>
+    <projectUrl>https://github.com/espinhara/REnv.git</projectUrl>
+    <packageSourceUrl>https://github.com/espinhara/REnv.git</packageSourceUrl>
+    <iconUrl>
+      https://res.cloudinary.com/espinhara/image/upload/v1713500969/REnv/wlgqhyjllk2kr7ghqv4m.ico</iconUrl>
+    <licenseUrl>
+      https://raw.githubusercontent.com/espinhara/REnv/44d728596d6e03ac609bfcdf021e89fe2ce245b3/LICENSE.md</licenseUrl>
+    <releaseNotes>Create package renv version:1.0.0</releaseNotes>
+    <summary>This is a Chocolatey package that installs a PowerShell script called REnv,
+      which
+      can be used to update environment variables in the command prompt without having to
+      close and
+      open it again.</summary>
+    <projectSourceUrl>https://github.com/espinhara/REnv</projectSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
