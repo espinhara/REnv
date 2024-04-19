@@ -23,15 +23,18 @@ $archive = "C:\Users\Public\REnv.exe"
 $diretorioDestino = "$env:SystemRoot\System32"
 #Verifica se o arquivo de origem existe
 if (Test-Path $archive) {
-    # Copia o arquivo para o diretório de destino
-    Copy-Item -Path $archive -Destination $diretorioDestino -Force
-    
-    # Verifica se o arquivo foi copiado com sucesso
-    if (Test-Path (Join-Path $diretorioDestino (Split-Path $archive -Leaf))) {
-        Write-Host "Arquivo copiado com sucesso para $diretorioDestino."
-    }
-    else {
-        Write-Host "Falha ao copiar o arquivo para $diretorioDestino."
+
+    if (!(Test-Path "$env:SystemRoot\System32\REnv.exe")) {
+        # Copia o arquivo para o diretório de destino
+        Copy-Item -Path $archive -Destination $diretorioDestino -Force
+        
+        # Verifica se o arquivo foi copiado com sucesso
+        if (Test-Path (Join-Path $diretorioDestino (Split-Path $archive -Leaf))) {
+            Write-Host "Arquivo copiado com sucesso para $diretorioDestino."
+        }
+        else {
+            Write-Host "Falha ao copiar o arquivo para $diretorioDestino."
+        }
     }
 }
 else {

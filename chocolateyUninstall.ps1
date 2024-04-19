@@ -21,6 +21,12 @@ if ((Test-Path "$executablePath\$executalbeName")) {
     # Informa o usuário sobre o sucesso
     Write-Host "Executável '$executalbeName' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
 }
+
+if ((Test-Path "$env:SystemRoot\System32\$executableName")) {
+    Remove-Item -Path "$env:SystemRoot\System32\$executalbeName" -Force
+    # Informa o usuário sobre o sucesso
+    Write-Host "Executável '$env:SystemRoot\System32' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
+}
 else {
     Write-Host "Falha ao remover o executável '$executalbeName'."
 }
