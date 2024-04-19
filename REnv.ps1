@@ -5,11 +5,10 @@ ____  _____
 | |_) |  _|  | '_ \\ \ / /       
 |  _ <| |___ | | | |\ V /   
 |_| \_\_____||_| |_| \_/
-                                                               
+                                                                
 "@ 
 
 function R-Env {   
-
     $envPath = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") -split ";"
     $envPath += [System.Environment]::GetEnvironmentVariable("PATH", "User") -split ";"
     $envPath = $envPath | Select-Object -Unique
@@ -18,18 +17,21 @@ function R-Env {
 
 Write-Host $promptREnv -ForegroundColor Blue
 
-# Defina o caminho da nova pasta que você deseja adicionar ao PATH
-$archive = "C:\Users\Public\REnv.exe"
+# Define o caminho do arquivo e o diretório de destino
+$executableName = 'REnv.exe'
+$folderName = 'REnv'
+$currentVersion = '0.0.1'
+$archive = "$env:TEMP\$folderName\$currentVersion\$executableName"
 $diretorioDestino = "$env:SystemRoot\System32"
-#Verifica se o arquivo de origem existe
-if (Test-Path $archive) {
 
-    if (!(Test-Path "$env:SystemRoot\System32\REnv.exe")) {
+# Verifica se o arquivo de origem existe
+if (Test-Path $archive) {
+    if (!(Test-Path "$diretorioDestino\$executableName")) {
         # Copia o arquivo para o diretório de destino
         Copy-Item -Path $archive -Destination $diretorioDestino -Force
         
         # Verifica se o arquivo foi copiado com sucesso
-        if (Test-Path (Join-Path $diretorioDestino (Split-Path $archive -Leaf))) {
+        if (Test-Path "$diretorioDestino\$executableName") {
             Write-Host "Arquivo copiado com sucesso para $diretorioDestino."
         }
         else {
@@ -41,9 +43,12 @@ else {
     Write-Host "O arquivo de origem $archive não foi encontrado."
 }
 
+# Verifica se o argumento "--version" ou "-v" foi fornecido
 if ($args -contains "--version" -or $args -contains "-v") {
-    Write-Host "REnv version: 0.0.1"
+    Write-Host "REnv version: $currentVersion"
     return
 }
+
+# Chama a função para atualizar as variáveis de ambiente
 R-Env
-Write-Host "Environment variables refreshed successfully."
+Write-Host "Variáveis de ambiente atualizadas com sucesso."

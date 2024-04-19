@@ -5,28 +5,27 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     Exit
 }
 
-# Caminho para o diretório onde o executável está localizado
-$executablePath = 'C:\Users\Public'
+# Define as variáveis
+$folderName = 'REnv'
+$currentVersion = '0.0.1'
+$executableName = 'REnv.exe'
+$executablePath = "$env:TEMP\$folderName\$currentVersion"
 
-# Remove o executável do diretório do sistema
-$executalbeName = "REnv.exe"
-# Verifica se o executável foi removido com sucesso
-if ((Test-Path "$executablePath\$executalbeName")) {
-    # Remove o executável do PATH do sistema
-    $escapedPath = [regex]::Escape($executablePath)
-    $newPath = [Environment]::GetEnvironmentVariable("PATH", "Machine") -replace "$escapedPath;", "" -replace ";$escapedPath", ""
-    [Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
-    
-    Remove-Item -Path "$executablePath\$executalbeName" -Force
-    # Informa o usuário sobre o sucesso
-    Write-Host "Executável '$executalbeName' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
+# Função para remover o executável
+function Remove-Executable {
+    param (
+        [string]$path
+    )
+    if (Test-Path $path) {
+        Remove-Item -Path $path -Force
+        Write-Host "Executável '$executableName' removido do diretório '$path' com sucesso."
+    } else {
+        Write-Host "Falha ao remover o executável '$executableName' do diretório '$path'."
+    }
 }
 
-if ((Test-Path "$env:SystemRoot\System32\$executableName")) {
-    Remove-Item -Path "$env:SystemRoot\System32\$executalbeName" -Force
-    # Informa o usuário sobre o sucesso
-    Write-Host "Executável '$env:SystemRoot\System32' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
-}
-else {
-    Write-Host "Falha ao remover o executável '$executalbeName'."
-}
+# Remove o executável do diretório temporário e do PATH do sistema
+Remove-Executable -path "$executablePath\$executableName"
+
+# Remove o executável do diretório System32, se estiver presente
+Remove-Executable -path "$env:SystemRoot\System32\$executableName"
