@@ -6,7 +6,7 @@
     <title>REnv</title>
     <authors>Gabriel Espinhara Da Silva, Matheus Landuci</authors>
     <owners>Gabriel Espinhara Da Silva</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Installs REnv script to refresh environment variables.</description>
     <tags>renv environment variables powershell</tags>
     <projectUrl>https://github.com/espinhara/REnv.git</projectUrl>

@@ -5,18 +5,22 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     Exit
 }
 
-# Define o nome do executável
-$executableName = "renv.exe"
-
 # Caminho para o diretório onde o executável está localizado
-$executablePath = [Environment]::GetFolderPath("System")
+$executablePath = 'C:\Users\Public'
 
 # Remove o executável do diretório do sistema
-Remove-Item -Path "$executablePath\$executableName" -Force
-
-# Remove o executável do PATH do sistema
-$newPath = [Environment]::GetEnvironmentVariable("PATH", "Machine") -replace "$executablePath;", "" -replace ";$executablePath", ""
-[Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
-
-# Informa o usuário sobre o sucesso
-Write-Host "Executável '$executablePath\$executableName' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
+$executalbeName = "REnv.exe"
+# Verifica se o executável foi removido com sucesso
+if ((Test-Path "$executablePath\$executalbeName")) {
+    # Remove o executável do PATH do sistema
+    $escapedPath = [regex]::Escape($executablePath)
+    $newPath = [Environment]::GetEnvironmentVariable("PATH", "Machine") -replace "$escapedPath;", "" -replace ";$escapedPath", ""
+    [Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
+    
+    Remove-Item -Path "$executablePath\$executalbeName" -Force
+    # Informa o usuário sobre o sucesso
+    Write-Host "Executável '$executalbeName' removido do diretório '$executablePath' e do PATH do sistema com sucesso."
+}
+else {
+    Write-Host "Falha ao remover o executável '$executalbeName'."
+}
